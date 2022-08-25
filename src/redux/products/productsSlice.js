@@ -10,24 +10,25 @@ export const productsSlice = createSlice({
     error: null,
   },
   reducers: {
-    buyProduct: {
+    updateQuantity: {
       reducer: (state, action) => {
         state.productList = state.productList.map((product) => {
-          if (product.id === action.payload) {
-            product.quantity += 1
-            state.money -= product.price
+          if (product.id !== action.payload.id) {
+            return product
           }
-          return product
-        })
-      },
-    },
-    sellProduct: {
-      reducer: (state, action) => {
-        state.productList = state.productList.map((product) => {
-          if (product.id === action.payload && product.quantity > 0) {
-            product.quantity -= 1
-            state.money += product.price
+
+          const differency = action.payload.quantity - product.quantity
+          // check for quantity is changed
+          if (differency > 0) {
+            state.money -= differency * product.price
+            product.quantity += differency
+            console.log('diff büyük')
+          } else if (differency < 0) {
+            state.money -= differency * product.price
+            product.quantity += differency
+            console.log('diff küçük')
           }
+
           return product
         })
       },
@@ -35,5 +36,5 @@ export const productsSlice = createSlice({
   },
   extraReducers: {},
 })
-export const { buyProduct, sellProduct } = productsSlice.actions
+export const { buyProduct, sellProduct, updateQuantity } = productsSlice.actions
 export default productsSlice.reducer
