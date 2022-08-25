@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+:root {
+  --brown: #483838;
+  --yellow: #FEDB39;
+  --blue-dark: #293462;
+  --blue-light: #1CD6CE;
+  --red: #D61C4E;
+  --box-shodow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--grenn-light);
+  color: var(--brown);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1200px;
+  margin: 100px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shodow);
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 80px;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  box-shadow: var(--box-shodow);
+  transition: .3s;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: var(--blue-light);
+}
+
+.btn-danger {
+  background-color: var(--red);
+}
+
+.navbar {
+  width: 100%;
+  min-height: 50px;
+  background-color: var(--yellow);
+  color: var(--red);
+  box-shadow: var(--box-shodow);
+  position: fixed;
+  top: 0;
+}
+
+.navbar > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.navbar > div > p {
+  display: inline-block;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+
+}
+
+.titleCard {
+  padding: 30px 0 20px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: var(--box-shodow);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.productCard > div, .productCard > img, .productCard > p {
+  display: inline-block;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.productImage {
+  width: 128px;
+  height: 128px;
+}
+
+.productTitle {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.productPrice {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--blue-light);
+}
+
+.productInput {
+  width: 40px;
+  height: 34px;
+  margin: 0 10px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(149, 157, 165, 0.5);
 }

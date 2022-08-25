@@ -1,10 +1,18 @@
 import './App.css'
+import Container from './components/Container'
+import Navbar from './components/Navbar'
+import Products from './components/Products'
+import TitleCard from './components/TitleCard'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello App</h1>
-    </div>
+    <>
+      <Navbar />
+      <Container>
+        <TitleCard />
+        <Products />
+      </Container>
+    </>
   )
 }
 
