@@ -1,11 +1,14 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+  const totalMoney = useSelector((state) => state.products.money)
+
   return (
     <nav className="navbar">
       <div>
         <p>Spend Money</p>
-        <p>$100,000,000,000</p>
+        <p>{`$${totalMoney}`}</p>
       </div>
     </nav>
   )

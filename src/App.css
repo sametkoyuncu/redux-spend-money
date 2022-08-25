@@ -46,6 +46,7 @@ body {
 
 .btn-danger {
   background-color: var(--red);
+  color: white;
 }
 
 .navbar {

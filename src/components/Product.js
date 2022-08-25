@@ -1,13 +1,10 @@
 import React from 'react'
+
 import Button from './Button'
 
 import Card from './Card'
 
-const handleClick = ({ id }) => {
-  console.log(`product id: ${id}`)
-}
-
-const Product = ({ id, title, price, image }) => {
+const Product = ({ id, title, price, image, quantity }) => {
   return (
     <Card>
       <div className="productCard">
@@ -15,14 +12,9 @@ const Product = ({ id, title, price, image }) => {
         <p className="productTitle">{title}</p>
         <p className="productPrice">{`$ ${price}`}</p>
         <div>
-          <Button productId={id} text="sell" action={handleClick} />
-          <input className="productInput" value={0} />
-          <Button
-            productId={id}
-            text="buy"
-            action={handleClick}
-            type="btn-primary"
-          />
+          <Button id={id} text="sell" type={quantity > 0 ? 'btn-danger' : ''} />
+          <input className="productInput" value={quantity} disabled />
+          <Button id={id} text="buy" type="btn-primary" />
         </div>
       </div>
     </Card>
