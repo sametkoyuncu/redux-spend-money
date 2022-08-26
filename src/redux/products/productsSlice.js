@@ -4,7 +4,7 @@ import { productList } from '../../data/productList'
 export const productsSlice = createSlice({
   name: 'products',
   initialState: {
-    money: 100000000000,
+    money: 1000,
     productList: productList,
     orderList: null,
     error: null,
@@ -22,11 +22,9 @@ export const productsSlice = createSlice({
           if (differency > 0) {
             state.money -= differency * product.price
             product.quantity += differency
-            console.log('diff büyük')
           } else if (differency < 0) {
             state.money -= differency * product.price
             product.quantity += differency
-            console.log('diff küçük')
           }
 
           return product

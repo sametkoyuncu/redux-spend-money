@@ -7,6 +7,10 @@
   --box-shodow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--grenn-light);
   color: var(--brown);
@@ -49,6 +53,36 @@ body {
   color: white;
 }
 
+.btn-go-to {
+  position: fixed;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--yellow);
+}
+
+.btn-go-to-top {
+  position: fixed;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  bottom: 70px;
+  right: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--red);
+}
+
 .navbar {
   width: 100%;
   min-height: 50px;
@@ -65,6 +99,7 @@ body {
   align-items: center;
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 20px;
 }
 
 .navbar > div > p {
