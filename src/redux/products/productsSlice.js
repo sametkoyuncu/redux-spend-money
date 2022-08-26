@@ -4,10 +4,8 @@ import { productList } from '../../data/productList'
 export const productsSlice = createSlice({
   name: 'products',
   initialState: {
-    money: 1000,
+    money: 100000000000,
     productList: productList,
-    orderList: null,
-    error: null,
   },
   reducers: {
     updateQuantity: {
@@ -34,5 +32,5 @@ export const productsSlice = createSlice({
   },
   extraReducers: {},
 })
-export const { buyProduct, sellProduct, updateQuantity } = productsSlice.actions
+export const { updateQuantity, updatePage } = productsSlice.actions
 export default productsSlice.reducer
