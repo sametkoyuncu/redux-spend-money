@@ -128,3 +128,39 @@ body {
   border-radius: 5px;
   border: 1px solid rgba(149, 157, 165, 0.5);
 }
+
+.receiptCard {
+  text-align: center;
+  background-color: var(--yellow);
+  color: var(--red);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 10px 50px 50px 50px;
+  border-radius: 10px;
+}
+
+.receiptCard-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: 1px solid var(--blue-dark);
+}
+
+.receiptCard-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.receiptCard-price {
+  color: var(--blue-light)
+}
+
+.receiptCard-total {
+  background-color: var(--red);
+  color: var(--yellow);
+}
