@@ -1,4 +1,4 @@
-# Sepend Bill Gates' Money Uygulaması
+# Spend Bill Gates' Money Uygulaması
 Padika.dev üzerindeki Redux modülünün ikinci ödevi olan 'Spend Bill Gates' Money' uygulaması. Uygulamada Bill Gates'in 100,000,000,000$'lık bakiyesini, satın aldığımız ürünlerle bitirmeye çalıyoruz.
 
 ## Kullanılan Teknolojiler
